@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Teharin Portfolio Tabs</title>
+<style>
+    body{
+        margin:0;
+        font-family:Arial, sans-serif;
+        background:#0f0f0f;
+        color:white;
+    }
+    header{
+        padding:20px;
+        text-align:center;
+        background:#1a1a1a;
+        font-size:28px;
+        font-weight:700;
+        letter-spacing:1px;
+        color:#ff66cc;
+    }
+
+    nav{
+        display:flex;
+        justify-content:center;
+        background:#121212;
+        border-bottom:2px solid #ff66cc;
+    }
+    nav button{
+        padding:14px 30px;
+        background:none;
+        border:none;
+        color:#ffccf2;
+        font-size:18px;
+        cursor:pointer;
+        transition:0.3s;
+    }
+    nav button:hover{
+        color:#ff66cc;
+    }
+    nav button.active{
+        border-bottom:3px solid #ff66cc;
+        color:#ff66cc;
+        font-weight:bold;
+    }
+
+    .tab{
+        display:none;
+        padding:40px 20px;
+        max-width:900px;
+        margin:auto;
+        text-align:center;
+        background:#1a1a1a;
+        margin-top:30px;
+        border-radius:10px;
+        border:1px solid #ff66cc30;
+    }
+    .tab h2{
+        color:#ff66cc;
+        margin-bottom:15px;
+    }
+</style>
+</head>
+<body>
+<header>TEHARIN — PORTFOLIO</header>
+
+<nav>
+    <button class="active" onclick="openTab('home')">Home</button>
+    <button onclick="openTab('about')">About</button>
+    <button onclick="openTab('skills')">Skills</button>
+    <button onclick="openTab('projects')">Projects</button>
+    <button onclick="openTab('contact')">Contact</button>
+</nav>
+
+<div id="home" class="tab" style="display:block;">
+    <h2>Welcome</h2>
+    <p>Hi, I'm <strong>Teharin</strong>, a passionate web developer who loves creating beautiful, responsive, and modern websites. This portfolio showcases my skills, creativity, and growth in web development.</p>
+
+    <p style="margin-top:20px;">I specialize in crafting clean layouts, smooth user interfaces, and minimal yet impactful designs. My projects focus on simplicity, functionality, and aesthetics, ensuring that each design provides a great user experience.</p>
+
+    <h3 style="margin-top:40px;color:#ff66cc;">📌 What I Do</h3>
+    <p>
+        • Build modern landing pages<br>
+        • Design personal portfolios<br>
+        • Create mini-applications (like temperature converters)<br>
+        • Work with clean UI/UX layouts<br>
+        • Experiment with animations and transitions for better visuals
+    </p>
+
+    <h3 style="margin-top:40px;color:#ff66cc;">🌟 My Vision</h3>
+    <p>
+        I aim to grow into a full-stack developer who can build complete, scalable, and visually appealing applications.
+        I believe in learning continuously, improving consistently, and creating projects that reflect both creativity and precision.
+    </p>
+
+    <h3 style="margin-top:40px;color:#ff66cc;">💡 Why I Love Web Development</h3>
+    <p>
+        Web development gives me the chance to turn ideas into something real. From a blank screen to a fully designed webpage — the process motivates me to push my limits and think creatively.
+    </p>
+
+    <h3 style="margin-top:40px;color:#ff66cc;">🚀 Future Goals</h3>
+    <p>
+        • Learn advanced JavaScript and frameworks<br>
+        • Build real-world level full websites<br>
+        • Create interactive dashboards and tools<br>
+        • Work with clients and companies to expand my experience
+    </p>
+
+    <div style="height:800px;"></div>
+</div>
+</div>
+
+<div id="about" class="tab">
+    <h2>About Me</h2>
+    <p>I’m Teharin, a passionate and dedicated web developer currently pursuing my BCA degree. I enjoy creating modern, responsive, and visually appealing websites that focus on clean design and smooth user experience. With a growing skill set in HTML, CSS, JavaScript, and basic cybersecurity, I love turning ideas into real, functional web projects. I am a fast learner, highly motivated, and constantly improving my craft by working on new designs, layouts, and creative concepts. My goal is to become a skilled full-stack developer and build projects that make a meaningful impact.</p>
+    <p style="margin-top:15px;">I enjoy designing landing pages, portfolios, and mini‑applications with clean UI and smooth user experience. My goal is to improve daily and grow as a professional web developer.</p>
+    <div style="height:500px;"></div>
+</div>
+
+<div id="skills" class="tab">
+    <h2>My Skills</h2>
+    <p>• HTML • CSS • JavaScript • GitHub • Cybersecurity Basics</p>
+    <p style="margin-top:15px;">am a hardworking and creative individual with a strong ability to learn quickly and manage multiple tasks efficiently. I have a solid foundation in computer applications, including MS Word, Excel, and PowerPoint, and I am a certified Cybersecurity student. Additionally, I am proficient in programming concepts and have experience in areas like Java, multithreading, and database connectivity (JDBC). My skills also include problem-solving, adaptability, and effective communication in multiple languages—English, Hindi, Marathi, and Urdu—which help me collaborate well in diverse environments. I am always eager to take on new challenges and apply my knowledge to real-world projects.</p>
+    <div style="height:450px;"></div>
+</div>
+
+<div id="projects" class="tab">
+    <h2>Projects</h2>
+    <p>• Landing Page<br>• Portfolio Website<br>• Temperature Converter App</p>
+    <p style="margin-top:15px;">worked on the Web Development Internship Project, where I developed a responsive website using HTML and CSS. During this project, I was responsible for designing the layout, structuring the content, and ensuring the website was user-friendly and visually appealing. I applied my knowledge of web development principles to create an interactive and professional-looking site. This project helped me strengthen my front-end development skills, attention to detail, and understanding of web design, while also improving my ability to manage tasks and deliver a complete project efficiently..</p>
+    <div style="height:600px;"></div>
+</div>
+
+<div id="contact" class="tab">
+    <h2>Contact</h2>
+    <p>Email: teharinshaikh42@gmail.com<br>Phone: +91 00000000</p>
+    <p style="margin-top:15px;">Feel free to reach out for internships, collaborations or web development work.</p>
+    <div style="height:500px;"></div>
+</div>
+
+<script>
+function openTab(tabName) {
+    const tabs = document.querySelectorAll('.tab');
+    tabs.forEach(t => t.style.display = 'none');
+
+    document.getElementById(tabName).style.display = 'block';
+
+    const btns = document.querySelectorAll('nav button');
+    btns.forEach(b => b.classList.remove('active'));
+    event.target.classList.add('active');
+}
+</script>
+
+  <div style="height:40px"></div>
+</body>
+</html>
